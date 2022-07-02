@@ -13,6 +13,6 @@ public class Example07 {
 		int num1 = Integer.parseInt(strNum1);
 		int num2 = Integer.parseInt(strNum2);
 		int result = num1 + num2;
-		System.out.println("덧샘 결과:" + result);
+		System.out.println("덧셈 결과:" + result);
 	}
 }
