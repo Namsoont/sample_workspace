@@ -22,6 +22,10 @@ public static void main(String[] args) {
 	System.out.println("합결과: " + result);
 	System.out.printf("차이는 %.2f 입니다\n", result1);
 	
+	
+	
+	
+	
 	System.out.printf("저의 이름은 %s이고 나이는 %d 입니다.\n", "홍길동", 14);
 	// 정수는 %d 실수는%f 
 	String name = "남순탁";
