@@ -21,7 +21,7 @@ public class Example09 {
 	            System.out.println("값이 작습니다.");
 	         }
 	      }
-	      
+	     
 	      System.out.println("end.");
 		
 		

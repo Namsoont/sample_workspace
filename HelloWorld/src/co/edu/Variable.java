@@ -24,5 +24,6 @@ public class Variable {
 		System.out.println("이력변경추가.");
 		//깃에서 수정한 작업입니다.
 		System.out.println("gihub에서 작업함");
+		//추가
 	}
 }
