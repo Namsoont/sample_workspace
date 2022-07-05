@@ -7,7 +7,8 @@ public class MethodExample01 {
 //		showInfo(" 장마다", 100);	
 //		showInfo(" 비좀그만와라!",7);
 //		peinStar(5, "☆");
-		printGugudan(3);
+		for (int i = 2; i <= 9; i++)
+		printGugudan(i);
 		
 	}
 	public static void	peinStar(int times, String shape ) {
@@ -34,15 +35,16 @@ public class MethodExample01 {
 	//정의구문
 	public static long sum(int num) { //parameter (매개변수)
 		int result = num * 2;
-		return result; //자동형변환(promotion)
+		return result;  //자동형변환(promotion)
 		
 	}
 	
 	public static void printGugudan(int a) {
 		for (int i = 1; i <=9; i++) {
-			System.out.println(a + "단 : " + a * i);
+		System.out.printf("%d * %d = %d\t", a , i, (a * i)); //a + "단 : " + a * i , "%d * %d = %d\n", a , i, (a * i)
 		
 		}
+		System.out.println();
 
 	
 }
