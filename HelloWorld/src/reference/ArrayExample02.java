@@ -8,7 +8,7 @@ public class ArrayExample02 {
 		for (int i =0; i < intAry.length; i++) {
 			System.out.println(intAry[i]);
 			
-			if (intAry[i] > 25) {
+			if (intAry[i] > 3) {
 				System.out.println("25보다 큰 수 : " + intAry[i]);
 				
 			}

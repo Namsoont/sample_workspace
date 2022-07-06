@@ -3,10 +3,10 @@ package reference;
 public class MethodExample01 {
 	public static void main(String[] args) {
 		//실행구문
-//		long sum = sum(20);  //arguments(매개 값)
-//		showInfo(" 장마다", 100);	
-//		showInfo(" 비좀그만와라!",7);
-//		peinStar(5, "☆");
+		long sum = sum(20);  //arguments(매개 값)
+		showInfo(" 장마다", 100);	
+		showInfo(" 비좀그만와라!",7);
+		peinStar(5, "☆");
 		for (int i = 2; i <= 9; i++)
 		printGugudan(i);
 		
