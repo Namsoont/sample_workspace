@@ -6,11 +6,36 @@ import java.util.Scanner;
 /*
  * BoradApp: 등록/ 조회 / 수정 / 삭제 / 리스트 => 배열.
  */
+//id: user1, passwd :1212 , => 로그인되었습니다.
 public class BoardApp {
 
 	public static void main(String[] args) {
 		Board[] boards = new Board[100];
 		Scanner scn = new Scanner(System.in);
+		
+		// 로그인 처리 가능.
+		
+		
+//		
+//		
+//		while (true) {
+//			System.out.println("아이디를 입력하세요. ");			
+//			String id = scn.nextLine();
+//			System.out.println("비밀번호를 입력하세요.");
+//			String pw = scn.nextLine();
+//			
+//			
+//			if (id.equals("user1") && pw.equals("1234")) {
+//				System.out.println("로그인 되었습니다. " );
+//				
+//				break;
+//			} else {
+//				System.out.println("아이디를 다시 입력하세요.");
+//			} 
+//				
+//			
+//		} 
+		
 
 		boolean run = true;
 
