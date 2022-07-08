@@ -20,7 +20,7 @@ public class UnivFriend extends Friend {
 	
 	@Override
 	public void showInfo() {
-		System.out.println("Friend [name=" + getName() + ", phone=" + getPhone() +"  학교: " + univ + ", 전공: "
+		System.out.println("company [name=" + getName() + ", phone=" + getPhone() +"  학교: " + univ + ", 전공: "
 				+ major + "]");
 		
 	}

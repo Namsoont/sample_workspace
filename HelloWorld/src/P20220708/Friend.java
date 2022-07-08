@@ -28,10 +28,10 @@ public class Friend {
 
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + ", phone=" + phone + "]";
+		return "Friend [친구=" + name + ", phone=" + phone + "]";
 	}
 	public void showInfo() {
-		System.out.println("Friend [name=" + name + ", phone=" + phone + "]");
+		System.out.println("친구 [학교친구=" + name + ", phone=" + phone + "]");
 		
 	}
 	

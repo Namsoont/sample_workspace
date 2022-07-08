@@ -16,7 +16,7 @@ public class ComFriend extends Friend {
   }
 	@Override
 	public void showInfo() {
-		System.out.println("Friend [name=" + getName() + ", phone=" + getPhone() +", 회사: " + company + ", 부서: "
+		System.out.printf("회사: [직원=" + getName() + ", phone=" + getPhone() +", 회사: " + company + ", 부서: "
 				+ departmnt + "]");
 		
 	}

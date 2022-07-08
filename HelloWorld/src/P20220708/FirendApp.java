@@ -14,11 +14,18 @@ public class FirendApp {
 
 	public void start() {
 		while (true) {
-
+			int selectNo= 0;
 			System.out.println("1.등록 2.조회 3.목록 9.종료");
 			System.out.println("선택 >");
+			try {
+				 selectNo = Integer.parseInt(scn.nextLine());
+			} catch (Exception e) {
+				System.out.println("1,2,3 번중에 선택하세요");
+			}
 
-			int selectNo = Integer.parseInt(scn.nextLine());
+//			timerShow("1.등록 2.조회 3.목록 9.종료");
+
+
 			if (selectNo == 1) {
 				add();
 
@@ -29,19 +36,30 @@ public class FirendApp {
 				list();
 
 			} else if (selectNo == 9) {
-				System.out.println("프로그램 종료 합니다.");
+ 			System.out.println("프로그램 종료 합니다.");
+//				timerShow("프로그램을 종료합니다.");
 				break;
 			}
 		}
 		System.out.println("프로그램 종료.");
+//		timerShow("프로그램 종료.");
 	}// end of start()
 
 	private void add() {
 
 		System.out.println("1.학교 2.회사 3.친구");
+//		timerShow("1.학교 2.회사 3.친구 ");
 		System.out.print("선택> ");
-		int choice = Integer.parseInt(scn.nextLine());
-
+//		timerShow("선택>");
+		int choice = 0;
+		
+		try { 
+			choice = Integer.parseInt(scn.nextLine());
+		} catch(Exception e) {
+			System.out.println("숫자를 입력하세요");
+//			timerShow("숫자를 입력하세요");
+		}
+	
 		System.out.println("이름: ");
 		String name = scn.nextLine();
 		System.out.println("연락처: ");
@@ -91,4 +109,21 @@ public class FirendApp {
 		}
 
 	}
+
+//	private void timerShow(String msg) {
+//		String[] message = msg.split("");
+//		for (int i = 0; i < message.length; i++) {
+//			System.out.print("message[i");
+//			
+//			try {
+//				Thread.sleep(10);
+//				
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		System.out.println();
+//		
+//								
+//}
 }
