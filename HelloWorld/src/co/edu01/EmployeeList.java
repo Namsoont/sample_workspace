@@ -1,11 +1,12 @@
 package co.edu01;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class EmployeeList {
 	// 싱글톤.
 	private static EmployeeList instance = new EmployeeList();
-
+	Calendar cal = Calendar.getInstance();
 	private EmployeeList() {
 
 	}
@@ -75,53 +76,105 @@ public class EmployeeList {
 		}
 		
 	}
-	private int getLastDate(int mon) {
-		switch(mon)	{
-		case 6:
-			return 30;
-		case 7:
-			return 31;
-		default:
-			return 30;
-		}
-	}
-	//1일의 요일정보.
-	private int getDayInfo(int mon) {
-		switch(mon) {
-		case 6:
-			return 3; //첫쨋날 요일정보.
-		case 7:
-			return 5;
-		default:
-			return 0;
-		}
+public int getLastDate(int year, int month) {
 		
+		cal.set(year, month -1 , 1);
+		return cal.getActualMaximum(Calendar.DATE);
+		
+		
+							
 	}
+public int getDayInfo(int year, int month) {
+	
+	cal.set(year, month -1 , 1);
+	return cal.get(Calendar.DAY_OF_WEEK);
+}
+
+
+//	private int getLastDate(int mon) {
+//		switch(mon)	{
+//		 case 1 :
+//	         return 31;
+//	      case 2:
+//	         return 28;
+//	      case 3 :
+//	         return 31;
+//	      case 5 :
+//	         return 31;
+//	      case 7 :
+//	         return 31;
+//	      case 8 :
+//	         return 31;
+//	      case 10 :
+//	         return 31;
+//	      case 12 :
+//	         return 31;
+//	      default:
+//	         return 30;
+//
+//		}
+//	}
+//	//1일의 요일정보.
+//	private int getDayInfo(int mon) {
+//		switch(mon) {
+//		 case 1 :
+//	         return 6;
+//	      case 2: 
+//	         return 2;
+//	      case 3 :
+//	         return 2;
+//	      case 4 :
+//	         return 5;
+//	      case 6 :
+//	         return 3; // 첫째날 요일정보
+//	      case 7 :
+//	         return 5;
+//	      case 8 :
+//	         return 1;
+//	      case 9 :
+//	         return 4;
+//	      case 10 :
+//	         return 6;
+//	      case 11 :
+//	         return 2;
+//	      case 12 :
+//	         return 4;
+//	      default:
+//	         return 0;
+//
+//		}
+//		
+//	}
 	//달력
 	public void showCalendar() {
+		System.out.println("연도를 입력 >>");
+		int year = Integer.parseInt(scn.nextLine());
+		
 		System.out.println("월을 입력>>");
 		int month = Integer.parseInt(scn.nextLine());
 		
+		
 		//요일정보, 1일의 위치. 말일의 날짜.
 		String[] days = {"Sun", "Mon", "tue", "wed", "thr", "fri", "sat"};
-		int firstDay = getDayInfo(month); //일0, 월:1 , 화:2 ,수:3, 목:4, 금:5 토:6
-		int lastDate = getLastDate(month);
+		int firstDay = getDayInfo(year, month); //일0, 월:1 , 화:2 ,수:3, 목:4, 금:5 토:6
+		int lastDate = getLastDate(year, month);
 		
 		for(int i = 0; i < days.length; i++) {
 			System.out.printf("%4s", days[i]);
 		} 
 		 System.out.println();
 		 //1일의 요일정보를 마추도록.
-		 for (int i = 0; i < firstDay; i++) {
+		 for (int i = 1; i < firstDay; i++) {
 			 System.out.printf("%4s", " ");
 		 }
 		for(int i = 1; i <= lastDate; i++) {
 			System.out.printf("%4s", i);
-			if((i+firstDay) % 7 == 0 ) { //토요일까지 출력후 줄 바꿈
+			if((i+firstDay-1) % 7 == 0 ) { //토요일까지 출력후 줄 바꿈
 				System.out.println();
 			}
 		}
 		System.out.println("\n프로그램 종료.");
 		System.out.println();
 	}
+	
 }
