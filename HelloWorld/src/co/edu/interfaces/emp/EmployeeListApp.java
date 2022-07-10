@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EmployeeListApp {
 	public static void main(String[] args) {
 
-		EmployeeList app = EmployeeArray.getInstance();
+		EmployeeList app = EmployeeArrayList.getInstanc();
 
 		Scanner scn = new Scanner(System.in);
 
@@ -28,7 +28,13 @@ public class EmployeeListApp {
 				System.out.print("검색할 사번을 입력: ");
 				int empId = scn.nextInt();
 				Employee emp = app.search(empId);
-				System.out.println(emp.getDetailInfo());
+				if (empId == emp.getEmployeeId()) {
+					System.out.println("입력 하신 사번은:"+ emp.getDetailInfo());
+				}
+				else {
+					System.out.println("해당 정보는 없는 사번입니다.");
+				}
+				
 			} else if (selectNo == 9) {
 				System.out.println("프로그램 종료.");
 				break;

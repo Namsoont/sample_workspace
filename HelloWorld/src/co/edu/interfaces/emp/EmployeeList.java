@@ -2,6 +2,7 @@ package co.edu.interfaces.emp;
 
 /*
  * 기능 정의(선언) 부분.
+ * Interface는 장치가 사이에 서로서로 정보 주고 받고 해주는 역할 < 쉽게 생각하면 택배 상하차 장소 
  */
 public interface EmployeeList {
 

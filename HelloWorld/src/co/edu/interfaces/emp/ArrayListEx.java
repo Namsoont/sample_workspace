@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ArrayListEx {
 	public static void main(String[] args) {
 		
+		//array 기본 문법
 		Employee[] empAry = new Employee[10];
 		empAry[0] = new Employee(); //추가
 		empAry[0] = null;

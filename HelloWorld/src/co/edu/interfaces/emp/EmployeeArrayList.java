@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 /*
  * 컬렉션 기반으로 기능구현.
+ * 
+ * Array List 문법
  */
 public class EmployeeArrayList implements EmployeeList {
 
-	private static EmployeeArrayList instance = new EmployeeArrayList();
+	private static EmployeeArrayList instance = new EmployeeArrayList(); //어레이스 변수 선언
 
-	private EmployeeArrayList() {}
+	private EmployeeArrayList() {} // 이름 알아오기<
 	
 
 	public static EmployeeArrayList getInstanc() {
@@ -19,11 +21,11 @@ public class EmployeeArrayList implements EmployeeList {
 
 	ArrayList<Employee> list;
 	int empNum; // 안써도됨
-	Scanner scn = new Scanner(System.in);
+	Scanner scn = new Scanner(System.in);  //입력을 할수 있게 만들어주는 
 
 	@Override
 	public void init() {
-		list = new ArrayList<Employee>();
+		list = new ArrayList<Employee>(); //변수 재 조정
 		System.out.println(list +"초기화 되었습니다.");
 		
 	}

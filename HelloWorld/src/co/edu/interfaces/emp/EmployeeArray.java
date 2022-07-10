@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /*
  *  배열기반 기능 구현(implement).
+ *  list 배열 !!!! 햇갈리지 말기
  */
 public class EmployeeArray implements EmployeeList {
 	// 싱글톤 기반.
@@ -19,7 +20,7 @@ public class EmployeeArray implements EmployeeList {
 	   
 	   @Override
 	   public void init() {
-	      System.out.print("초기화 ");
+	      System.out.print("초기화");
 	      int num = Integer.parseInt(scn.nextLine());
 	      list = new Employee[num];
 	   }
