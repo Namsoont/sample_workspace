@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EmployeeListApp {
 	public static void main(String[] args) {
 
-		EmployeeList app = EmployeeArrayList.getInstanc();
+		EmployeeArrayList app = EmployeeArrayList.getInstanc();
 
 		Scanner scn = new Scanner(System.in);
 
