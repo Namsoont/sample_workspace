@@ -33,13 +33,15 @@ public class BoardDAO {
 		// 3. 조회(작성자)
 		public List<Board> search(String writer) {
 			List<Board> list = new ArrayList<>(); //찾고자하는 이름 => 리스트로 반환
-			
+			boolean yes = false;
 			for(Board board : this.list) {
 				if(board.getWriter().equals(writer)) {
 					list.add(board);
+					yes = true;
 				}
 			}
-			
+			if(!yes) // 없는작성자입력시 오류 방지하기위해.
+				System.out.println("찾고자하는 이름이 없습니다.");
 			return list;
 		}
 		
