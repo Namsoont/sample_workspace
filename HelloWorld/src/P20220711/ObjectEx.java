@@ -51,4 +51,5 @@ public class ObjectEx {
 		System.out.println(member1.toString()); // Object.toString()으로 찍어줌.
 		
 	}
+	
 }
