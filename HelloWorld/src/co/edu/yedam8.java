@@ -9,7 +9,7 @@ public class yedam8 {
 	// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
 	// 한 단어를 입력받을 경우 Scanner객체의 next() 함수를 사용하면 됩니다.
 		int user=0;
-		int com=(int)(Math.random()*3); // 0,1,2
+		int com = (int)(Math.random()*3); // 0,1,2
 		Scanner scn = new Scanner(System.in);
 		System.out.println("===가위바위보 게임을 시작합니다==");
 		System.out.println("가위(0), 바위(1), 보(2) 입력 : ");
