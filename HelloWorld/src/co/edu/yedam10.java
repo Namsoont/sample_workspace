@@ -9,12 +9,14 @@ import java.util.Scanner;
 public class yedam10 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in); 
-		String[] data = scn.nextLine().split(" ");
-		int n = Integer.parseInt(data[0]);
-		int m = Integer.parseInt(data[1]);
-		
-		for (int j = 1; j <= m; j++) {
-			System.out.println(n + " 단 : " + n + " x " + j + " = " + n * j);
+		System.out.println("단 : ");
+		int a = scn.nextInt();
+		System.out.println("수 : ");
+		int b = scn.nextInt();
+		for (int i = 1; i <= b; i++) {
+			System.out.printf(a + " x " + i + " = " + (a*i));
+			System.out.println();
+
 
 		}
 	}

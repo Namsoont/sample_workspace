@@ -14,10 +14,10 @@ public class yedam7 {
 				Scanner scn = new Scanner(System.in);
 				a = scn.nextInt();
 				if(a % 4 == 0 && a % 100 != 0 || a%400 == 0) {
-					b = 1;
+					System.out.println("운년 입니다.");
 				} else {
-					b = 0;
+					System.out.println("운년이 아닙니다.");
 				}
-				System.out.println(b);
+				
 	}
 }

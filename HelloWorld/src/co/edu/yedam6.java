@@ -15,22 +15,15 @@ public class yedam6 {
 		int X = scn.nextInt();
 		int Y = scn.nextInt();
 		
-		if(X > 0) {
-			if(Y > 0) {
-				System.out.print(1);
-			} 
-			else {
-				System.out.print(4);
-			}
-		} 
-		
-		else {
-			if(Y > 0) {
-				System.out.print(2);
-			} 
-			else {
-				System.out.print(3);
-			}
+		if (X > 0 && Y > 0) {
+			System.out.println("1사분면");
+		}else if (X < 0 && Y > 0) {
+			System.out.println("2사분면");
+		}else if (X < 0 && Y < 0) {
+			System.out.println("3사분면");
+		}else if (X > 0 && Y < 0) {
+			System.out.println("4사분면");
 		}
+		
 	}
 }
