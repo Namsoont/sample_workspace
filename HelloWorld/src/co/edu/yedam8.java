@@ -14,13 +14,13 @@ public class yedam8 {
 		
 		
 		switch (b) {
-		case " 바위 ":
+		case "바위":
 			System.out.println("이기기 위해선 보를 내야합니다");
 			break;
-		case " 가위 ":
-			System.out.println("이기기 바위해선 보를 내야합니다");
+		case "가위":
+			System.out.println("이기기 위해선 바위를 내야합니다");
 			break;
-		case " 보":
+		case "보":
 			System.out.println("이기기 위해선 가위를 내야합니다");
 			break;
 		}
