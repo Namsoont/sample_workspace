@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class yedam10 {
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
+		Scanner scn = new Scanner(System.in); 
 		String[] data = scn.nextLine().split(" ");
 		int n = Integer.parseInt(data[0]);
 		int m = Integer.parseInt(data[1]);
