@@ -23,7 +23,7 @@ public class CalendarExample {
 		System.out.println(cal.getActualMaximum(Calendar.DATE) + "일"); // 말일날짜
 		
 	}
-<<<<<<< HEAD
+
 	
 //	// 년년, 월 정보 => 해당 년, 월의 요일정보(메소드) 2022년 9월달 => 30
 //	public int getLastDate(int year, int month) {
@@ -44,8 +44,8 @@ public class CalendarExample {
 //		cal.set(year, month -1 , 1);
 //		return cal.getActualMaximum(Calendar.DAY_OF_WEEK);
 	}
-=======
-}
+
+//}
 	// 년년, 월 정보 => 해당 년, 월의 요일정보(메소드) 2022년 9월달 => 30
 //	public int getLastDate(int year, int month) {
 		
@@ -55,10 +55,10 @@ public class CalendarExample {
 		
 							
 //	}
->>>>>>> branch 'master' of https://github.com/Namsoont/sample_workspace.git
+
 	
-<<<<<<< HEAD
-=======
+
+
 //	// 년, 월 정보 => 해당 년, 월의 말일정보(메소드) 2022년 9월달 => 5요일
 //	int year = 2022;
 //	int month = 30;
@@ -69,5 +69,5 @@ public class CalendarExample {
 //		return cal.getActualMaximum(Calendar.DAY_OF_WEEK);
 //	}
 //	
->>>>>>> branch 'master' of https://github.com/Namsoont/sample_workspace.git
+
 //}
