@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class yedam11 {
 	public static void main(String[] args) {
-		
+		Scanner scn = new Scanner(System.in);
 		//주어진 배열을 이용하여 다음 내용을 구현하세요.
 				int[] arr1 = { 10, 20, 30, 50, 3, 60, -3 };
 				
@@ -30,15 +30,17 @@ public class yedam11 {
 				
 				//문제3. 주어진 배열 안의 변경하고 싶은 값의 인덱스 번호를 입력받아, 그 값을 1000으로 변경해보자.
 		  		//   입력) 인덱스: 3 ->   {10, 20, 30, 1000, 3, 60, -3}
-				int choice = Integer.parseInt(JOptionPane.showInputDialog("바꾸고 싶은 배열의 인덱스 번호를 입력하세요."));
+				
+				System.out.println("인덱스 값: ");
+				int choice = Integer.parseInt(scn.nextLine());
 		        arr1[choice] = 1000;
 		        
-		        String msg = "";
+		        String m = "";
 		        for (int i = 0; i < arr1.length; i++) {
-		            msg += arr1[i] + " ";
-				
+		            m += arr1[i] + " ";
+			   
 		        }
-		        JOptionPane.showMessageDialog(null, msg);
+//		        JOptionPane.showMessageDialog(null, m);
 				
 		        //문제4. 주어진 배열의 요소에서 최대값과 최소값을 구해보자.
 				int max = arr1[0];
@@ -59,7 +61,7 @@ public class yedam11 {
 				
 				//문제5. 별도의 배열을 선언하여 양의 정수 10개를 입력받아 배열에 저장하고, 배열에 있는 정수 중에서 3의 배수만 출력해보자.
 				System.out.println("양의 정수 10개 입력 : ");
-				Scanner scn = new Scanner(System.in);
+				
 				int[] a = new int[10];
 				
 				for(int i = 0; i < a.length; i++) {
@@ -68,7 +70,7 @@ public class yedam11 {
 				}
 				for(int i = 0; i < a.length; i++) {
 					if(a[i] %3 == 0) {
-						System.out.println(a[i] + " ");
+						System.out.println("3의 배수:  " +a[i]);
 					}
 				}
 				

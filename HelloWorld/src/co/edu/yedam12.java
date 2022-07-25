@@ -9,7 +9,7 @@ public class yedam12 {
 		boolean run = true;
 		int studentNum = 0;
 		int[] scores = null;
-		double avg= 0;
+		double avg = 0;
 		Scanner scn = new Scanner(System.in);
 		
 		while(run) {
@@ -52,6 +52,7 @@ public class yedam12 {
 					break;
 				case 5:
 					System.out.println("프로그램 종료");
+					run = false;
 					break;
 				}
 			
