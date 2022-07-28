@@ -38,7 +38,7 @@ public class yedam13 {
 	            
 	            System.out.println("제품별 가격>>");
 	            for (int i = 0; i < b.length; i++) {
-	               System.out.println("[" + i + "] > "+"상품명 " + product[i] +" : "+"가격 "+ price[i]);
+	               System.out.println("[" + i + "] > "+"상품명 " + price[i] +" : "+"가격 "+ price[i]);
 	            }
 	            break;
 	         case 4:
