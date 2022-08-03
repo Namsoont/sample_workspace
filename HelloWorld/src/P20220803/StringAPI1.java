@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 
 public class StringAPI1 {
 	public static void main(String[] args) {
