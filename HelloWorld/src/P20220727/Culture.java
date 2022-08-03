@@ -45,7 +45,7 @@ public abstract class Culture {
 	         star += "★";
 	      }
 	      if( d > 4.5 ) {
-	         star = " ★★★★☆ ";
+	         star = " ★★★★★ ";
 	      }
 	      return star;
 	      

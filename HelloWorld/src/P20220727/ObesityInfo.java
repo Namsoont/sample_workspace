@@ -19,7 +19,7 @@ public class ObesityInfo extends StandardWeightInfo {
 		System.out.printf("%s님의 신장 %.0f 몸무게 %.1f 비만 입니다.",getName(),getHeight(),getWeight());
 		
 	}
-
+	
 	
 	}
 	

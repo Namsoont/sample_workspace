@@ -42,7 +42,16 @@ public class yedam5 {
 				// 문제4) 변수 val의 값이 양수일 경우엔 변수 값을, 아닐 경우엔 0을 담는 변수를 선언하세요. (단, 삼항연산자를 사용)
 				int intResult = (0 < val) ? val : 0;
 				
-				
+//				int var = -2;
+//				
+//				int var2 = var > 0 ? : 0;
+//				
+//				if(var > 0) {
+//					System.out.println(var);
+//				} else {
+//					System.out.println(0);
+//				}
+//				
 				System.out.println(intResult);
 				
 				/* 문제 5) 다음과 같이 두 개의 정수가 주어졌을 경우 
