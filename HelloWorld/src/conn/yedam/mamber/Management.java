@@ -13,10 +13,60 @@ public class Management extends DAO{
 		getMember();
 		//한건 입력
 		insertInfo();
-	
+		//수정
+		updateInfo();
+		//삭제
+		deleteInfo();
+	}
+	private void deleteInfo() {
+		int result = 0;
+		try {
+			conn();
+			String sql = "delete from mamber where id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "A");
+			result = pstmt.executeUpdate();
+		} catch(Exception e) {
+			
+		} finally {
+			disconnect();
+		}
+		if(result == 1 ) {
+			System.out.println(result + "건이 삭제 되었습니다.");
+		} else {
+			System.out.println("삭제되지 않았습니다");
+		}
+	}
+	//수정
+	private void updateInfo() {
+		int result = 0;
+		try {
+			//1.db연결
+			conn();
+			//2.query 작성
+			String sql = "update member set pw = ? where id = ?";
+			//3. 창구 및 query 생성
+			pstmt = conn.prepareStatement(sql);
+			//4. 데이터 입력
+			pstmt.setString(1, "4321");
+			pstmt.setString(2, "A");
+			//5.실행
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			
+		}	finally {
+			disconnect();
+		}
+		if(result == 1 ) {
+			System.out.println( result + "건이 수정 되었습니다.");
+		} else {
+			System.out.println("수정되지 않았습니다.");
+		}
+				
+		
 	}
 
-		
+
 	private void insertInfo() {
 		int result = 0;
 		
@@ -39,7 +89,7 @@ public class Management extends DAO{
 			
 		} catch(Exception e) {
 			
-		}finally {
+		} finally {
 			disconnect();
 		}
 		if(result == 1) {

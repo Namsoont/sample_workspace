@@ -8,6 +8,24 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DAO {
+	//싱글톤
+	
+	
+//	//자기 자신으로 만든 인스턴스
+//	private static DAO dao = null;
+//	//생성자
+//	private DAO() {
+//		
+//	}
+//	//3. 1번에 만든 인스턴스 사용
+//	public static DAO getInstance() {
+//		if(dao == null) {
+//			return new DAO();
+//		} else 
+//			return new DAO();
+//	
+//	}
+	
 	//DAO
 	//Data access Object <-데이터 접속할 정의
 	
