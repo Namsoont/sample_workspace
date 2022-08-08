@@ -28,6 +28,7 @@ public class MemberManage extends DAO {
 			String sql = "SELECT * FROM MEMBER WHERE member_id = ? AND member_pw = ?";
 			//3.창구 만들기
 			pstmt = conn.prepareStatement(sql);
+			System.out.println(sql);
 			pstmt.setString(1, member.getMemberId());
 			pstmt.setString(2, member.getMemberPw());			
 			

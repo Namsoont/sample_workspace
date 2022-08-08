@@ -68,6 +68,7 @@ public class LMSApp {
 					std.setStudentTel(tel);
 
 					ss.insertStudent(std);
+				
 				}
 				// 학생 정보 입력
 				else if (menu == 2) {
@@ -98,9 +99,9 @@ public class LMSApp {
 					System.out.println("ID 입력 : ");
 					int id = Integer.parseInt(scn.nextLine());
 					std.setStudentId(id);
-
+					
 					std = ss.getStuduent(std);
-
+					
 					System.out.println(std.toString());
 
 				}

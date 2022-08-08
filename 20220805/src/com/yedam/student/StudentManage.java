@@ -159,7 +159,7 @@ public class StudentManage extends DAO {
 				std.setStudentEng(rs.getInt("student_eng"));
 				std.setStudentMath(rs.getInt("student_math"));
 			}
-
+				System.out.println(std.getStudentId());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
