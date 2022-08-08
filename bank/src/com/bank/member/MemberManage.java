@@ -29,7 +29,7 @@ public class MemberManage extends DAO{
 			
 			if(rs.next()) {
 				member = new Member();
-				member.setAccountId(rs.getString("member_id"));
+				member.setMemberId(rs.getString("member_id"));
 				member.setMemberPw(rs.getString("member_pw"));
 				member.setMemberName(rs.getString("member_name"));
 				member.setRole(rs.getString("role"));
@@ -50,7 +50,7 @@ public class MemberManage extends DAO{
 		try {
 			conn();
 			
-			String sql = "insert into bankmember (member_id, member_pw, member_name, member_role) values (?,?,?,?)";
+			String sql = "insert into bankmember (member_id, member_pw, member_name, role) values (?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1,member.getMemberId());
 		pstmt.setString(2, member.getMemberPw());

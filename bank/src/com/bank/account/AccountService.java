@@ -1,6 +1,9 @@
 package com.bank.account;
 
+import java.util.List;
 import java.util.Scanner;
+
+import com.bank.member.MemberService;
 
 public class AccountService {
 	Scanner scn = new Scanner(System.in);
@@ -21,8 +24,13 @@ public class AccountService {
 		ac.setAccountId(accountId);
 		ac.setMemberId(customId);
 		
-		
-		
+		//계좌 등록 메소드
+		int result = AccountManage.getInstance().insertAccount(ac);
+		if(result == 1) {
+			System.out.println("계좌 등록 완료");
+		} else {
+			System.out.println("계좌 등록 실패");
+		}
 		
 	}
 	
@@ -83,12 +91,15 @@ public class AccountService {
 		System.out.println("=======계좌 이체=======");
 		
 		System.out.println("받는 사람 계좌");
+		
 		String toaccountId = scn.nextLine();
 		
 		System.out.println("보내는 사람 계좌");
+		
 		String fromaccountId = scn.nextLine();
 		
 		System.out.println("출금 금액");
+		
 		int balance = Integer.parseInt(scn.nextLine());
 		
 		AccountManage.getInstance().transferMoney(toaccountId, fromaccountId, balance);
@@ -97,7 +108,16 @@ public class AccountService {
 		
 		
 	}
-	
+	public void getAccount() {
+	List<Account> list = AccountManage.getInstance().getAccountList(MemberService.memberInfo.getMemberId());
+	System.out.println(MemberService.memberInfo.getMemberName() +"님의 계좌 정보");
+		for(Account account : list) {
+			System.out.println("계좌 ID" + account.getAccountId());
+			System.out.println("잔고 : " + account.getBalance());
+			System.out.println("생성일 : " + account.getCredate());
+		}
+		
+	}
 	
 	
 	
